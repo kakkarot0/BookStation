@@ -53,6 +53,7 @@ router.get('/:id', async (request, response) => {
       const { id } = request.params;
   
       const book = await Book.findById(id);
+      console.log(book);
   
       return response.status(200).json(book);
     } catch (error) {
